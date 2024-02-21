@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+categories = ["chinese", "italian", "japanese", "french", "belgian"]
+
+5.times do |i|
+  Restaurant.create!(
+    name: "Restaurant #{i + 1}",
+    address: "#{i + 1} Main Street",
+    phone_number: "123-456-7890",
+    category: categories.sample
+  )
+end
